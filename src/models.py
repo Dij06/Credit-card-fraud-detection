@@ -155,7 +155,7 @@ class FraudRandomForest:
             "optimal_threshold": self.optimal_threshold,
             "val_f1": self.val_f1,
             "feature_names": self.feature_names
-        }, target_path)
+        }, target_path, compress=3)
         logger.info("Saved Random Forest to: %s", target_path)
 
     @classmethod
