@@ -13,8 +13,6 @@ Supports 4 Machine Learning and Deep Learning architectures:
 
 from pathlib import Path
 import sys
-import json
-import numpy as np
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
@@ -1169,6 +1167,8 @@ elif menu_selection == "EDA & Model Performance":
                         <b>Explanation:</b> In this historical dataset, recorded legitimate transactions have a median of €22.00 (mean €88.29), while recorded fraudulent transactions have a lower median of €9.25 (mean €122.21). Although fraudulent amounts extend up to €2,125.87, over half of all confirmed fraudulent transactions are under €10.00.
                     </div>
                     """, unsafe_allow_html=True)
+                else:
+                    st.info("Dynamic boxplot requires the raw dataset. To view real-time data slicing, download 'creditcard.csv' from Kaggle and place it in the dataset/ directory.")
 
         with e4:
             with st.container(border=True):

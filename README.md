@@ -157,24 +157,37 @@ Evaluated on **42,722 unseen transactions** containing **74 genuine fraud cases*
 ### A. Environment Setup
 ```bash
 # Clone the repository and navigate into the project directory
-cd credit-card-fraud-detection
+git clone https://github.com/Dij06/Credit-card-fraud-detection.git
+cd Credit-card-fraud-detection
 
 # Install required dependencies
 pip install -r requirements.txt
 ```
 
-### B. Run Automated Unit Tests
+### B. Dataset Setup (Optional for Inference, Required for Model Training)
+The repository includes all pre-trained model weights, test sample pools, and aggregated metrics, allowing the application to run immediately out-of-the-box upon cloning without downloading the large historical dataset.
+
+If you wish to re-train the models from scratch using `python train.py`:
+1. Download the European Credit Card Fraud Detection dataset (`creditcard.csv`) from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+2. Place `creditcard.csv` directly into the `dataset/` directory:
+   ```text
+   Credit-card-fraud-detection/
+   └── dataset/
+       └── creditcard.csv
+   ```
+
+### C. Run Automated Unit Tests
 ```bash
 python -m unittest tests/test_project.py -v
 ```
 
-### C. Launch the Streamlit Dashboard
+### D. Launch the Streamlit Dashboard
 ```bash
-python -m streamlit run app/dashboard.py
+streamlit run app/dashboard.py
 ```
 Open **[http://localhost:8501](http://localhost:8501)** in your web browser.
 
-### D. Re-train Models (Optional)
+### E. Re-train Models (Optional)
 ```bash
 python train.py
 ```

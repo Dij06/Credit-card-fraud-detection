@@ -5,7 +5,6 @@ batch predictions, and dashboard dependencies.
 """
 import sys
 import os
-import json
 import ast
 import glob
 import warnings
@@ -14,7 +13,6 @@ from pathlib import Path
 warnings.filterwarnings("ignore")
 os.environ["STREAMLIT_LOG_LEVEL"] = "error"
 import pandas as pd
-import numpy as np
 
 # Ensure project root in pythonpath
 project_root = Path(__file__).resolve().parent.parent
@@ -25,15 +23,7 @@ from src.data_processing import (
     load_raw_dataset,
     validate_dataset_structure,
     split_data_stratified,
-    apply_smote_training_only,
-    transform_inference_record,
-    extract_legitimate_transactions
-)
-from src.models import (
-    FraudLogisticRegression,
-    FraudRandomForest,
-    FraudANNClassifier,
-    FraudAutoencoderDetector
+    apply_smote_training_only
 )
 from src.prediction import FraudPredictionEngine
 
