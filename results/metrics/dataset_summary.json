@@ -1,0 +1,74 @@
+{
+    "audit": {
+        "is_valid": true,
+        "warnings": [
+            "Dataset contains 1081 duplicate rows."
+        ],
+        "errors": [],
+        "total_rows": 284807,
+        "total_columns": 31,
+        "columns": [
+            "Time",
+            "V1",
+            "V2",
+            "V3",
+            "V4",
+            "V5",
+            "V6",
+            "V7",
+            "V8",
+            "V9",
+            "V10",
+            "V11",
+            "V12",
+            "V13",
+            "V14",
+            "V15",
+            "V16",
+            "V17",
+            "V18",
+            "V19",
+            "V20",
+            "V21",
+            "V22",
+            "V23",
+            "V24",
+            "V25",
+            "V26",
+            "V27",
+            "V28",
+            "Amount",
+            "Class"
+        ],
+        "missing_values": 0,
+        "duplicate_rows": 1081,
+        "class_distribution": {
+            "0": 284315,
+            "1": 492
+        },
+        "fraud_percentage": 0.1727485630620034
+    },
+    "summary": {
+        "total_transactions": 284807,
+        "legit_count": 284315,
+        "fraud_count": 492,
+        "fraud_ratio": 0.001727485630620034,
+        "amount_stats": {
+            "overall_mean": 88.34961925093133,
+            "overall_std": 250.1201092401885,
+            "overall_median": 22.0,
+            "overall_max": 25691.16,
+            "legit_mean": 88.29102242231328,
+            "legit_median": 22.0,
+            "legit_max": 25691.16,
+            "fraud_mean": 122.21132113821139,
+            "fraud_median": 9.25,
+            "fraud_max": 2125.87
+        },
+        "time_stats": {
+            "min_time_sec": 0.0,
+            "max_time_sec": 172792.0,
+            "duration_hours": 47.99777777777778
+        }
+    }
+}
