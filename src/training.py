@@ -141,10 +141,9 @@ def evaluate_and_plot_all_models(
 
     df_comp = pd.DataFrame(results_list)
 
-    # Save to both standard results/model_comparison.csv and results/metrics
+    # Save master benchmark to results/model_comparison.csv
     comp_csv = config.RESULTS_DIR / "model_comparison.csv"
     df_comp.to_csv(comp_csv, index=False)
-    df_comp.to_csv(metrics_dir / "model_comparison_table.csv", index=False)
 
     serializable_cache = {}
     for k, v in eval_cache.items():

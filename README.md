@@ -104,7 +104,6 @@ credit-card-fraud-detection/
 │   │   ├── dataset_summary.json
 │   │   ├── hourly_activity.csv
 │   │   ├── model_comparison_metrics.json
-│   │   ├── model_comparison_table.csv
 │   │   ├── sample_batch_template.csv
 │   │   └── test_sample_pool.csv
 │   └── model_comparison.csv           # Master benchmark table
