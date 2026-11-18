@@ -10,5 +10,10 @@ font = "sans serif"
 toolbarMode = "minimal"
 showErrorDetails = true
 
+[server]
+port = 8501
+address = "localhost"
+headless = true
+
 [browser]
 gatherUsageStats = false
